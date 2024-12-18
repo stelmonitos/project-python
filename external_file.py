@@ -60,4 +60,3 @@ def save_to_file(folders, encrypted, decrypted):
 
 # Wywołanie funkcji zapisu danych do pliku
 save_to_file(a, encrypted, decrypted)
-
