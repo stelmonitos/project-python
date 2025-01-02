@@ -29,8 +29,9 @@ def cezar_code(name_to_encrypt, key):
 def cezara_decrypt(name_to_encrypt, key):
     return cezar_code(name_to_encrypt, -key)
 
-
+  
 # Przykład szyfrowania i deszyfrowania tekstu
+
 name_to_encrypt = "Witaj w świecie kryptografii!"
 key = 3
 
@@ -38,6 +39,7 @@ encrypted = cezar_code(name_to_encrypt, key)
 print("Zaszyfrowany tekst:", encrypted)
 
 decrypted = cezara_decrypt(encrypted, key)
+
 print("Odszyfrowany tekst:", decrypted)
 
 
@@ -60,3 +62,6 @@ def save_to_file(folders, encrypted, decrypted):
 
 # Wywołanie funkcji zapisu danych do pliku
 save_to_file(a, encrypted, decrypted)
+
+print("Odszyfrowany tekst:", decrypted)
+
