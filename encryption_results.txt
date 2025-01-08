@@ -1,0 +1,3 @@
+Wyniki szyfrowania i deszyfrowania:
+Zaszyfrowany tekst: Zlwdm z tzlhflh nubswrjudill!
+Odszyfrowany tekst: Witaj w qwiecie kryptografii!
