@@ -1,8 +1,7 @@
 from pathlib import Path
 
-#SKANOWANIE WYBRANEJ SCIEZKI
 def folders_list():
-    path = Path(input("Enter the path that you wanna scan: "))
+    path = Path(input("Enter the path that you want to scan: "))
     folders = []
     for i, element in enumerate(path.iterdir()):
         if element.is_dir():
@@ -10,9 +9,20 @@ def folders_list():
             folders.append(element.name)
     return folders
 
+def analyze_file_names(folders):
+    word_count = [len(folder.split()) for folder in folders]
+    char_count = [len(folder) for folder in folders]
+    return word_count, char_count
 
+# Wywołanie funkcji z możliwością wyboru ścieżki
 a = folders_list()
+word_count, char_count = analyze_file_names(a)
+
+for index, (folder, words, chars) in enumerate(zip(a, word_count, char_count)):
+    print(f"{index + 1}. {folder} - Words: {words}, Characters: {chars}")
+    
 print(a[0])
+
 
 # SZYFROWANIE
 def cezar_code(name_to_encrypt, key):
@@ -64,4 +74,3 @@ def save_to_file(folders, encrypted, decrypted):
 save_to_file(a, encrypted, decrypted)
 
 print("Odszyfrowany tekst:", decrypted)
-
